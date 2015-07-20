@@ -8,12 +8,32 @@
 
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "0.0-3308"]
+                 ;; Facilities for async programming and
+                 ;; communication in Clojure
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
+                 ;; Lisp/Hiccup style templating for Facebook's
+                 ;; React in ClojureScript
                  [sablono "0.3.4"]
+                 ;; Clojure JSON and JSON SMILE (binary json format)
+                 ;; encoding/decoding
+                 [cheshire "5.5.0"]
+                 [com.andrewmcveigh/cljs-time "0.3.10"]
+                 ;; A data inspection component for Om
+                 [ankha "0.1.4"]
+                 ;; A simple Ajax library for ClojureScript
+                 [cljs-ajax "0.3.13"]
+                 ;; A client-side router for ClojureScript
+                 [secretary "1.2.3"]
+                 ;; A date and time library for ClojureScript
+                 [com.cemerick/clojurescript.test "0.3.3"]
+                 ;; ClojureScript interface to Facebook's React
                  [org.omcljs/om "0.8.8"]]
 
   :plugins [[lein-cljsbuild "1.0.5"]
-            [lein-figwheel "0.3.7"]]
+            ;; Leiningen plugin that pushes ClojureScript
+            ;; code changes to the client
+            [lein-figwheel "0.3.7"]
+            [cider/cider-nrepl "0.9.1"]]
 
   :source-paths ["src"]
 

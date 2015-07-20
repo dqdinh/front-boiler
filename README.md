@@ -32,7 +32,7 @@ And open your browser in `resources/public/index.html`. You will not
 get live reloading, nor a REPL.
 
 
-## Notes from 'Building CircleCI's Front end With Om' --
+## Notes from 'Building CircleCI's Front end With Om'
 https://www.youtube.com/watch?v=LNtQPSUi1iQ
 
 #### Client Stack
