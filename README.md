@@ -1,18 +1,15 @@
 # frontend boiler
-
 ## Overview
-
-Stripped down version of circleci's frontend
+For learning purposes, a stripped down version of circleci's frontend
 (https://github.com/circleci/frontend)
-
 
 ## Setup
 
-To get an interactive development environment run:
+Install rlwrap for a better REPL experience: `brew install rlwrap`
 
-    lein figwheel
+To get an interactive development environment run: `rlwrap lein figwheel`
 
-and open your browser at [localhost:3449](http://localhost:3449/).
+and open your browser at [localhost:3030](http://localhost:3030/).
 This will auto compile and send all changes to the browser without the
 need to reload. After the compilation process is complete, you will
 get a Browser Connected REPL. An easy way to try it is:
@@ -20,6 +17,8 @@ get a Browser Connected REPL. An easy way to try it is:
     (js/alert "Am I connected?")
 
 and you should see an alert in the browser window.
+
+To visit a namespace: `> (in-ns 'namespace.core)`
 
 To clean all compiled files:
 
