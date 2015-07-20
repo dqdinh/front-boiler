@@ -1,0 +1,24 @@
+Figwheel: focusing on build-ids (dev)
+[0mCompiling "resources/public/js/compiled/hello_cljs.js" from ["src"]...
+[32mSuccessfully compiled "resources/public/js/compiled/hello_cljs.js" in 0.127 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /front_boiler/core.js
+Figwheel: focusing on build-ids (dev)
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+[32mSuccessfully compiled "resources/public/js/compiled/front-boiler.js" in 0.2 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /front_boiler/core.js
+Figwheel: focusing on build-ids (dev)
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+[32mSuccessfully compiled "resources/public/js/compiled/front-boiler.js" in 0.146 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /front_boiler/core.js
+Figwheel: focusing on build-ids (dev)
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+[32mSuccessfully compiled "resources/public/js/compiled/front-boiler.js" in 0.186 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /front_boiler/core.js
