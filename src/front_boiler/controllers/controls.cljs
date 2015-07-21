@@ -1,3 +1,10 @@
+;; Controls Controller Notes
+;; - helper methods to change global state atom
+;;   using cursors
+;; - exposed through core/controls-handler
+;; - excuted in a alt! function inside a go loop.
+;;   alt! function return [value channel]
+
 (ns front-boiler.controllers.controls
   (:require [cljs.core.async :as async :refer [>! <! alts! chan sliding-buffer close!]]
             [cljs.reader :as reader]
@@ -98,7 +105,6 @@
 (defmethod post-control-event! :default
   [target message args previous-state current-state]
   (utils/mlog "No post-control for: " message))
-
 
 (defmethod control-event :user-menu-toggled
   [target message _ state]

@@ -31,20 +31,6 @@
 
 (enable-console-print!)
 
-;; Overcome some of the browser limitations around DnD
-(def mouse-move-ch
-  (chan (sliding-buffer 1)))
-
-(def mouse-down-ch
-  (chan (sliding-buffer 1)))
-
-(def mouse-up-ch
-  (chan (sliding-buffer 1)))
-
-(js/window.addEventListener "mousedown" #(put! mouse-down-ch %))
-(js/window.addEventListener "mouseup"   #(put! mouse-up-ch   %))
-(js/window.addEventListener "mousemove" #(put! mouse-move-ch %))
-
 (def controls-ch
   (chan))
 
@@ -63,13 +49,22 @@
 (defn app-state []
   (let [initial-state (state/initial-state)]
     (atom (assoc initial-state
-              :current-user (-> js/window
-                                (aget "renderContext")
-                                (aget "current_user")
-                                utils/js->clj-kw)
-              :render-context (-> js/window
-                                  (aget "renderContext")
-                                  utils/js->clj-kw)
+              ;; TODO Replace with ajax call to backend
+              ;;      for inital user settings
+              ;; :current-user (-> js/window
+              ;;                   (aget "renderContext")
+              ;;                   (aget "current_user")
+              ;;                   utils/js->clj-kw)
+              :current-user {:admin false
+                             :dev-admin false
+                             :login "test-user"}
+              ;; TODO Replace with ajax call to backend
+              ;;      for inital user settings
+              ;; :render-context (-> js/window
+              ;;                     (aget "renderContext")
+              ;;                     utils/js->clj-kw)
+              :render-context {:instrument false
+                               :user_session_settings {:om_build_id "dev"}}
               :comms {:controls  controls-ch
                       :api       api-ch
                       :errors    errors-ch
@@ -79,13 +74,7 @@
                       :api-mult (async/mult api-ch)
                       :errors-mult (async/mult errors-ch)
                       :nav-mult (async/mult navigation-ch)
-                      :ws-mult (async/mult ws-ch)
-                      :mouse-move {:ch mouse-move-ch
-                                   :mult (async/mult mouse-move-ch)}
-                      :mouse-down {:ch mouse-down-ch
-                                   :mult (async/mult mouse-down-ch)}
-                      :mouse-up {:ch mouse-up-ch
-                                 :mult (async/mult mouse-up-ch)}}))))
+                      :ws-mult (async/mult ws-ch)}))))
 
 (def debug-state)
 
@@ -101,6 +90,7 @@
   (swallow-errors
    (binding [front-boiler.async/*uuid* (:uuid (meta value))]
      (let [previous-state @state]
+       ;; apply control-event partial with state as the last argument
        (swap! state (partial controls-con/control-event container (first value) (second value)))
        (controls-con/post-control-event! container (first value) (second value) previous-state @state)))))
 

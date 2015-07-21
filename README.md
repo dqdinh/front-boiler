@@ -31,6 +31,10 @@ To create a production build run:
 And open your browser in `resources/public/index.html`. You will not
 get live reloading, nor a REPL.
 
+## Notes about circleci's frontend repo
+- The actual HTML/JS/etc is served from our closed-source backend. The code which bootstraps the client-side application is not present in this code base. (https://github.com/circleci/frontend/issues/19)
+- The following variables need bootstrapping:
+  * window.renderContext
 
 ## Notes from 'Building CircleCI's Front end With Om'
 https://www.youtube.com/watch?v=LNtQPSUi1iQ
