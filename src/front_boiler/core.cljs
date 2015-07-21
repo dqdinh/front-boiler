@@ -92,6 +92,7 @@
      (let [previous-state @state]
        ;; apply control-event partial with state as the last argument
        (swap! state (partial controls-con/control-event container (first value) (second value)))
+       ;; if specified, apply some functuon after control-event is executed.
        (controls-con/post-control-event! container (first value) (second value) previous-state @state)))))
 
 (defn nav-handler
