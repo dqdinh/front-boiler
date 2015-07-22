@@ -4,8 +4,6 @@
             [clojure.string :as string]
             [goog.dom]
             [goog.dom.DomHelper]
-            ;; [front-boiler.ab :as ab]
-            ;; [front-boiler.analytics :as analytics]
             [front-boiler.components.app :as app]
             [front-boiler.config :as config]
             [front-boiler.controllers.controls :as controls-con]
@@ -30,6 +28,38 @@
                    [front-boiler.utils :refer [inspect timing swallow-errors]]))
 
 (enable-console-print!)
+
+;; Helper methods
+;; TODO move to own file
+
+(defn apply-app-id-hack
+  "Hack to make the top-level id of the app the same as the
+   current knockout app. Lets us use the same stylesheet."
+  []
+  (goog.dom.setProperties (goog.dom/getElement "app") #js {:id "om-app"}))
+
+(defn toggle-admin []
+  (swap! debug-state update-in [:current-user :admin] not))
+
+(defn toggle-dev-admin []
+  (swap! debug-state update-in [:current-user :dev-admin] not))
+
+(defn explode []
+  (swallow-errors
+    (assoc [] :deliberate :exception)))
+
+(defn  app-state-to-js
+  "Used for inspecting app state in the console."
+  []
+  (clj->js @debug-state))
+
+(defn add-css-link [path]
+  (let [link (goog.dom/createDom "link"
+               #js {:rel "stylesheet"
+                    :href (str path "?t=" (.getTime (js/Date.)))})]
+    (.appendChild (.-head js/document) link)))
+
+;; declare channels
 
 (def controls-ch
   (chan))
@@ -199,37 +229,10 @@
   (put! ws-ch [:subscribe {:channel-name (pusher/user-channel user)
                            :messages [:refresh]}]))
 
-(defn apply-app-id-hack
-  "Hack to make the top-level id of the app the same as the
-   current knockout app. Lets us use the same stylesheet."
-  []
-  (goog.dom.setProperties (goog.dom/getElement "app") #js {:id "om-app"}))
-
-(defn ^:export toggle-admin []
-  (swap! debug-state update-in [:current-user :admin] not))
-
-(defn ^:export toggle-dev-admin []
-  (swap! debug-state update-in [:current-user :dev-admin] not))
-
-(defn ^:export explode []
-  (swallow-errors
-    (assoc [] :deliberate :exception)))
-
-(defn ^:export app-state-to-js
-  "Used for inspecting app state in the console."
-  []
-  (clj->js @debug-state))
-
-(defn ^:export reinstall-om! []
+(defn reinstall-om! []
   (install-om debug-state (find-app-container) (:comms @debug-state) true))
 
-(defn add-css-link [path]
-  (let [link (goog.dom/createDom "link"
-               #js {:rel "stylesheet"
-                    :href (str path "?t=" (.getTime (js/Date.)))})]
-    (.appendChild (.-head js/document) link)))
-
-(defn ^:export setup! []
+(defn setup! []
   (apply-app-id-hack)
   (let [state (app-state)
         top-level-node (find-top-level-node)
