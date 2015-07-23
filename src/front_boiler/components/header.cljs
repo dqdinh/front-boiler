@@ -5,7 +5,6 @@
             [front-boiler.components.common :as common]
             [front-boiler.components.crumbs :as crumbs]
             [front-boiler.components.forms :as forms]
-            [front-boiler.components.instrumentation :as instrumentation]
             [front-boiler.components.statuspage :as statuspage]
             [front-boiler.models.project :as project-model]
             [front-boiler.routes :as routes]
@@ -98,10 +97,7 @@
                  [:span (str "om " build-id " ")]]))
             [:a {:on-click #(raise! owner [:show-inspector-toggled])}
              (if inspector? "inspector off " "inspector on ")]
-            [:a {:on-click #(raise! owner [:clear-instrumentation-data-clicked])} "clear stats"]]
-           (om/build instrumentation/summary (:instrumentation app))]
-          (when (and open? expanded?)
-            (om/build instrumentation/line-items (:instrumentation app)))])))))
+            [:a {:on-click #(raise! owner [:clear-instrumentation-data-clicked])} "clear stats"]] ] ])))))
 
 (defn maybe-active [current goal]
   {:class (when (= current goal)

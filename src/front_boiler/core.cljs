@@ -29,36 +29,6 @@
 
 (enable-console-print!)
 
-;; Helper methods
-;; TODO move to own file
-
-(defn apply-app-id-hack
-  "Hack to make the top-level id of the app the same as the
-   current knockout app. Lets us use the same stylesheet."
-  []
-  (goog.dom.setProperties (goog.dom/getElement "app") #js {:id "om-app"}))
-
-(defn toggle-admin []
-  (swap! debug-state update-in [:current-user :admin] not))
-
-(defn toggle-dev-admin []
-  (swap! debug-state update-in [:current-user :dev-admin] not))
-
-(defn explode []
-  (swallow-errors
-    (assoc [] :deliberate :exception)))
-
-(defn  app-state-to-js
-  "Used for inspecting app state in the console."
-  []
-  (clj->js @debug-state))
-
-(defn add-css-link [path]
-  (let [link (goog.dom/createDom "link"
-               #js {:rel "stylesheet"
-                    :href (str path "?t=" (.getTime (js/Date.)))})]
-    (.appendChild (.-head js/document) link)))
-
 ;; declare channels
 
 (def controls-ch
@@ -228,6 +198,37 @@
 (defn subscribe-to-user-channel [user ws-ch]
   (put! ws-ch [:subscribe {:channel-name (pusher/user-channel user)
                            :messages [:refresh]}]))
+;; Helper methods
+;; TODO move to own file
+
+(defn apply-app-id-hack
+  "Hack to make the top-level id of the app the same as the
+   current knockout app. Lets us use the same stylesheet."
+  []
+  (goog.dom.setProperties (goog.dom/getElement "app") #js {:id "om-app"}))
+
+(defn toggle-admin []
+  (swap! debug-state update-in [:current-user :admin] not))
+
+(defn toggle-dev-admin []
+  (swap! debug-state update-in [:current-user :dev-admin] not))
+
+(defn explode []
+  (swallow-errors
+    (assoc [] :deliberate :exception)))
+
+(defn  app-state-to-js
+  "Used for inspecting app state in the console."
+  []
+  (clj->js @debug-state))
+
+(defn add-css-link [path]
+  (let [link (goog.dom/createDom "link"
+               #js {:rel "stylesheet"
+                    :href (str path "?t=" (.getTime (js/Date.)))})]
+    (.appendChild (.-head js/document) link)))
+
+;; start/restart app
 
 (defn reinstall-om! []
   (install-om debug-state (find-app-container) (:comms @debug-state) true))
@@ -250,6 +251,6 @@
     (when-let [user (:current-user @state)]
       (subscribe-to-user-channel user (get-in @state [:comms :ws])))))
 
-;; (render!)
-;;
-;; (defn on-js-reload [] (render!))
+(setup!)
+
+(defn on-js-reload [] (reinstall-om!))

@@ -26,6 +26,8 @@
                  [secretary "1.2.3"]
                  ;; A date and time library for ClojureScript
                  [com.cemerick/clojurescript.test "0.3.3"]
+                 [com.cemerick/url "0.1.1"]
+                 [hiccups "0.3.0"]
                  ;; ClojureScript interface to Facebook's React
                  [org.omcljs/om "0.8.8"]]
 

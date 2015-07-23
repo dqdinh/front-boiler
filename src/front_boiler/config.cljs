@@ -14,10 +14,7 @@
 (defn pusher
   "Options to be passed to the Pusher client library."
   []
-  ;;TODO Delete this if-let when https://github.com/circleci/circle/pull/3972 is fully deployed.
-  (if-let [app-key (aget js/window "renderContext" "pusherAppKey")]
-    {:key app-key}
-    (js->clj (aget js/window "renderContext" "pusher") :keywordize-keys true)))
+  {:key "7b71d1fda6ea5563b574"})
 
 (defn logging-enabled?
   []

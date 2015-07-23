@@ -22,3 +22,186 @@ Figwheel: focusing on build-ids (dev)
 notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
 notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
 notifying browser that file changed:  /front_boiler/core.js
+Figwheel: focusing on build-ids (dev)
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+WARNING: Use of undeclared Var front-boiler.api/get-build-tests at line 85 src/front_boiler/controllers/ws.cljs
+WARNING: No such namespace: shared, could not locate shared.cljs, shared.cljc, or Closure namespace "" at line 71 src/front_boiler/components/app.cljs
+WARNING: Use of undeclared Var shared/sticky-help-link at line 71 src/front_boiler/components/app.cljs
+WARNING: No such namespace: shared, could not locate shared.cljs, shared.cljc, or Closure namespace "" at line 71 src/front_boiler/components/app.cljs
+WARNING: Use of undeclared Var shared/sticky-help-link at line 71 src/front_boiler/components/app.cljs
+WARNING: Use of undeclared Var front-boiler.core/debug-state at line 41 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/debug-state at line 44 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/debug-state at line 53 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/api-data at line 150 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/message at line 152 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/status at line 152 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/api-data at line 152 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/previous-state at line 152 src/front_boiler/core.cljs
+[31mCompiling "resources/public/js/compiled/front-boiler.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /Users/ddinh/workspace/learn/clojure/dd/front-boiler/src/front_boiler/core.cljs, line 152, column 93
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+WARNING: Use of undeclared Var front-boiler.api/get-build-tests at line 85 src/front_boiler/controllers/ws.cljs
+WARNING: No such namespace: shared, could not locate shared.cljs, shared.cljc, or Closure namespace "" at line 71 src/front_boiler/components/app.cljs
+WARNING: Use of undeclared Var shared/sticky-help-link at line 71 src/front_boiler/components/app.cljs
+WARNING: No such namespace: shared, could not locate shared.cljs, shared.cljc, or Closure namespace "" at line 71 src/front_boiler/components/app.cljs
+WARNING: Use of undeclared Var shared/sticky-help-link at line 71 src/front_boiler/components/app.cljs
+WARNING: Use of undeclared Var front-boiler.core/debug-state at line 41 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/debug-state at line 44 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/debug-state at line 53 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/api-data at line 150 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/message at line 152 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/status at line 152 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/api-data at line 152 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/previous-state at line 152 src/front_boiler/core.cljs
+[31mCompiling "resources/public/js/compiled/front-boiler.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /Users/ddinh/workspace/learn/clojure/dd/front-boiler/src/front_boiler/core.cljs, line 152, column 93
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+WARNING: Use of undeclared Var front-boiler.api/get-build-tests at line 85 src/front_boiler/controllers/ws.cljs
+WARNING: No such namespace: shared, could not locate shared.cljs, shared.cljc, or Closure namespace "" at line 71 src/front_boiler/components/app.cljs
+WARNING: Use of undeclared Var shared/sticky-help-link at line 71 src/front_boiler/components/app.cljs
+WARNING: No such namespace: shared, could not locate shared.cljs, shared.cljc, or Closure namespace "" at line 71 src/front_boiler/components/app.cljs
+WARNING: Use of undeclared Var shared/sticky-help-link at line 71 src/front_boiler/components/app.cljs
+WARNING: Use of undeclared Var front-boiler.core/debug-state at line 42 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/debug-state at line 45 src/front_boiler/core.cljs
+WARNING: Use of undeclared Var front-boiler.core/debug-state at line 54 src/front_boiler/core.cljs
+Figwheel: focusing on build-ids (dev)
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+[32mSuccessfully compiled "resources/public/js/compiled/front-boiler.js" in 0.384 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /front_boiler/models/organization.js
+notifying browser that file changed:  /front_boiler/disposable.js
+notifying browser that file changed:  /front_boiler/config.js
+notifying browser that file changed:  /front_boiler/state.js
+notifying browser that file changed:  /front_boiler/extensions.js
+notifying browser that file changed:  /front_boiler/utils/seq.js
+notifying browser that file changed:  /front_boiler/utils/vcs_url.js
+notifying browser that file changed:  /front_boiler/async.js
+notifying browser that file changed:  /front_boiler/utils/html.js
+notifying browser that file changed:  /front_boiler/timer.js
+notifying browser that file changed:  /front_boiler/models/test.js
+notifying browser that file changed:  /front_boiler/utils/github.js
+notifying browser that file changed:  /front_boiler/scroll.js
+notifying browser that file changed:  /front_boiler/intercom.js
+notifying browser that file changed:  /front_boiler/favicon.js
+notifying browser that file changed:  /front_boiler/models/plan.js
+notifying browser that file changed:  /front_boiler/utils/ajax.js
+notifying browser that file changed:  /front_boiler/utils/state.js
+notifying browser that file changed:  /front_boiler/history.js
+notifying browser that file changed:  /front_boiler/datetime.js
+notifying browser that file changed:  /front_boiler/components/drawings.js
+notifying browser that file changed:  /front_boiler/controllers/api.js
+notifying browser that file changed:  /front_boiler/stefon.js
+notifying browser that file changed:  /front_boiler/pusher.js
+notifying browser that file changed:  /front_boiler/localstorage.js
+notifying browser that file changed:  /front_boiler/components/footer.js
+notifying browser that file changed:  /front_boiler/components/key_queue.js
+notifying browser that file changed:  /front_boiler/utils.js
+notifying browser that file changed:  /front_boiler/components/common.js
+notifying browser that file changed:  /front_boiler/models/build.js
+notifying browser that file changed:  /front_boiler/core.js
+notifying browser that file changed:  /front_boiler/api.js
+notifying browser that file changed:  /front_boiler/components/shared.js
+notifying browser that file changed:  /front_boiler/controllers/ws.js
+notifying browser that file changed:  /front_boiler/models/container.js
+notifying browser that file changed:  /front_boiler/components/statuspage.js
+notifying browser that file changed:  /front_boiler/browser_settings.js
+notifying browser that file changed:  /front_boiler/instrumentation.js
+notifying browser that file changed:  /front_boiler/utils/docs.js
+notifying browser that file changed:  /front_boiler/routes.js
+notifying browser that file changed:  /front_boiler/models/user.js
+notifying browser that file changed:  /front_boiler/components/app.js
+notifying browser that file changed:  /front_boiler/models/project.js
+notifying browser that file changed:  /front_boiler/models/action.js
+notifying browser that file changed:  /front_boiler/models/repo.js
+notifying browser that file changed:  /front_boiler/components/errors.js
+notifying browser that file changed:  /front_boiler/controllers/errors.js
+notifying browser that file changed:  /front_boiler/controllers/navigation.js
+notifying browser that file changed:  /front_boiler/components/crumbs.js
+notifying browser that file changed:  /front_boiler/components/forms.js
+notifying browser that file changed:  /front_boiler/components/landing.js
+notifying browser that file changed:  /front_boiler/controllers/controls.js
+notifying browser that file changed:  /front_boiler/components/header.js
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+[32mSuccessfully compiled "resources/public/js/compiled/front-boiler.js" in 0.63 seconds.[0m
+notifying browser that file changed:  /front_boiler/core.js
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+[32mSuccessfully compiled "resources/public/js/compiled/front-boiler.js" in 0.483 seconds.[0m
+notifying browser that file changed:  /front_boiler/config.js
+Figwheel: focusing on build-ids (dev)
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+[32mSuccessfully compiled "resources/public/js/compiled/front-boiler.js" in 0.436 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /front_boiler/models/organization.js
+notifying browser that file changed:  /front_boiler/disposable.js
+notifying browser that file changed:  /front_boiler/config.js
+notifying browser that file changed:  /front_boiler/state.js
+notifying browser that file changed:  /front_boiler/extensions.js
+notifying browser that file changed:  /front_boiler/utils/seq.js
+notifying browser that file changed:  /front_boiler/utils/vcs_url.js
+notifying browser that file changed:  /front_boiler/async.js
+notifying browser that file changed:  /front_boiler/utils/html.js
+notifying browser that file changed:  /front_boiler/timer.js
+notifying browser that file changed:  /front_boiler/models/test.js
+notifying browser that file changed:  /front_boiler/utils/github.js
+notifying browser that file changed:  /front_boiler/scroll.js
+notifying browser that file changed:  /front_boiler/intercom.js
+notifying browser that file changed:  /front_boiler/favicon.js
+notifying browser that file changed:  /front_boiler/models/plan.js
+notifying browser that file changed:  /front_boiler/utils/ajax.js
+notifying browser that file changed:  /front_boiler/utils/state.js
+notifying browser that file changed:  /front_boiler/history.js
+notifying browser that file changed:  /front_boiler/datetime.js
+notifying browser that file changed:  /front_boiler/components/drawings.js
+notifying browser that file changed:  /front_boiler/controllers/api.js
+notifying browser that file changed:  /front_boiler/stefon.js
+notifying browser that file changed:  /front_boiler/pusher.js
+notifying browser that file changed:  /front_boiler/localstorage.js
+notifying browser that file changed:  /front_boiler/components/footer.js
+notifying browser that file changed:  /front_boiler/components/key_queue.js
+notifying browser that file changed:  /front_boiler/utils.js
+notifying browser that file changed:  /front_boiler/components/common.js
+notifying browser that file changed:  /front_boiler/models/build.js
+notifying browser that file changed:  /front_boiler/core.js
+notifying browser that file changed:  /front_boiler/api.js
+notifying browser that file changed:  /front_boiler/components/shared.js
+notifying browser that file changed:  /front_boiler/controllers/ws.js
+notifying browser that file changed:  /front_boiler/models/container.js
+notifying browser that file changed:  /front_boiler/components/statuspage.js
+notifying browser that file changed:  /front_boiler/browser_settings.js
+notifying browser that file changed:  /front_boiler/instrumentation.js
+notifying browser that file changed:  /front_boiler/utils/docs.js
+notifying browser that file changed:  /front_boiler/routes.js
+notifying browser that file changed:  /front_boiler/models/user.js
+notifying browser that file changed:  /front_boiler/components/app.js
+notifying browser that file changed:  /front_boiler/models/project.js
+notifying browser that file changed:  /front_boiler/models/action.js
+notifying browser that file changed:  /front_boiler/models/repo.js
+notifying browser that file changed:  /front_boiler/components/errors.js
+notifying browser that file changed:  /front_boiler/controllers/errors.js
+notifying browser that file changed:  /front_boiler/controllers/navigation.js
+notifying browser that file changed:  /front_boiler/components/crumbs.js
+notifying browser that file changed:  /front_boiler/components/forms.js
+notifying browser that file changed:  /front_boiler/components/landing.js
+notifying browser that file changed:  /front_boiler/controllers/controls.js
+notifying browser that file changed:  /front_boiler/components/header.js
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+[31mCompiling "resources/public/js/compiled/front-boiler.js" failed.[0m
+ERROR: EOF while reading, starting at line 23 and column 1 on file /Users/ddinh/workspace/learn/clojure/dd/front-boiler/src/front_boiler/controllers/ws.cljs, line 106, column 1
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+WARNING: No such namespace: string, could not locate string.cljs, string.cljc, or Closure namespace "" at line 28 src/front_boiler/controllers/ws.cljs
+WARNING: Use of undeclared Var string/replace at line 28 src/front_boiler/controllers/ws.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/front-boiler.js" in 0.618 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /front_boiler/controllers/ws.js
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+[32mSuccessfully compiled "resources/public/js/compiled/front-boiler.js" in 0.736 seconds.[0m
+notifying browser that file changed:  /front_boiler/core.js
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+[32mSuccessfully compiled "resources/public/js/compiled/front-boiler.js" in 0.328 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /front_boiler/controllers/ws.js
+[0mCompiling "resources/public/js/compiled/front-boiler.js" from ["src"]...
+[32mSuccessfully compiled "resources/public/js/compiled/front-boiler.js" in 0.34 seconds.[0m
+notifying browser that file changed:  /front_boiler/pusher.js

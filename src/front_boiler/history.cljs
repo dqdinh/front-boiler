@@ -1,6 +1,5 @@
 (ns front-boiler.history
   (:require [clojure.string :as string]
-            [front-boiler.analytics :as analytics]
             [front-boiler.utils :as utils :include-macros true]
             [goog.events :as events]
             [goog.history.Html5History :as html5-history]
@@ -37,8 +36,7 @@
 (defn setup-dispatcher! [history-imp]
   (events/listen history-imp goog.history.EventType.NAVIGATE
                  #(do (set-current-token! history-imp)
-                      (sec/dispatch! (str "/" (.-token %)))
-                      (analytics/track-path (str "/" (.-token %))))))
+                      (sec/dispatch! (str "/" (.-token %))))))
 
 (defn bootstrap-dispatcher!
   "We need lots of control over when we start listening to navigation events because
@@ -90,7 +88,6 @@
                                    (.getAncestorByTagNameAndClass dom-helper -target "A"))
                           location (when target (str (.-pathname target) (.-search target) (.-hash target)))
                           new-token (when (seq location) (subs location 1))]
-                      (when target (analytics/track-link-clicked (.-className target)))
                       (when (and (seq location)
                                  (= (.. js/window -location -hostname)
                                     (.-hostname target))

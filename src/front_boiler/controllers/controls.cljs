@@ -17,7 +17,6 @@
             [front-boiler.utils.seq :refer [dissoc-in]]
             [front-boiler.utils.state :as state-utils]
             [goog.dom]
-            [goog.string :as gstring]
             [goog.labs.userAgent.engine :as engine]
             goog.style)
   (:require-macros [cljs.core.async.macros :as am :refer [go go-loop alt!]])

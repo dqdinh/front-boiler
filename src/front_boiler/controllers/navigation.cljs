@@ -1,7 +1,6 @@
 (ns front-boiler.controllers.navigation
   (:require [cljs.core.async :as async :refer [>! <! alts! chan sliding-buffer close!]]
             [clojure.string :as str]
-            [front-boiler.analytics :as analytics]
             [front-boiler.async :refer [put!]]
             [front-boiler.api :as api]
             [front-boiler.favicon]
@@ -46,9 +45,7 @@
                        (str/capitalize (name navigation-point))))
   (when :_description args
         (set-page-description! (:_description args)))
-  (scroll! args)
-  (when (:_analytics-page args)
-    (analytics/track-page (:_analytics-page args))))
+  (scroll! args))
 
 (defmethod post-navigated-to! :default
   [history-imp navigation-point args previous-state current-state]
@@ -110,5 +107,4 @@
 ;;                        :project-plan
 ;;                        api-ch
 ;;                        :context {:project-name (str (:org args) "/" (:repo args))})))))
-;;   (analytics/track-dashboard)
 ;;   (set-page-title!))

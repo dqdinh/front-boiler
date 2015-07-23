@@ -98,9 +98,10 @@ Cons
 
 #### An example of a Component's lifetime
 1. navigate to the page
-2. put message on API channel saying 'go get the build data'
+2. put message on API channel saying 'go get the build data' [out of scope. use ajax]
 3. subscribe to build updates channel (server side push notification channel)
-4. set some optimistic state: breadcrumbs, id values for uncleared
+   [out of scope. use ajax]
+4. set some optimistic state: breadcrumbs, id values for uncleared [out of scope. use ajax]
    information,.... Optimistic updates provide for a good UX loading process.
 5. In the API controller, when the event comes into the API queue saying that
    the data has been received, it will `assoc` that data in the key places where
@@ -109,9 +110,10 @@ Cons
    that will update the state too.
 
 #### An example of the Control's controller flow
-- Handle user interactions. Explictly define all actions that can happen from
-  a User Interaction. Actions put a message on the api channel. You tell the
-  user that the action has been queued. Then respond back with success or
+- Handle user interactions.
+- Explictly define all actions that can happen from a User Interaction.
+- Actions put a message on the api channel.
+- You tell the user that the action has been queued. Then respond back with success or
   failure
 
 #### Controllers

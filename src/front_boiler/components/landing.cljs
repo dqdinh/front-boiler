@@ -5,7 +5,6 @@
             [front-boiler.components.common :as common]
             [front-boiler.components.crumbs :as crumbs]
             [front-boiler.components.drawings :as drawings]
-            [front-boiler.components.shared :as shared]
             [front-boiler.scroll :as scroll]
             [front-boiler.state :as state]
             [front-boiler.stefon :as stefon]
