@@ -98,10 +98,9 @@ Cons
 
 #### An example of a Component's lifetime
 1. navigate to the page
-2. put message on API channel saying 'go get the build data' [out of scope. use ajax]
+2. put message on API channel saying 'go get the build data'
 3. subscribe to build updates channel (server side push notification channel)
-   [out of scope. use ajax]
-4. set some optimistic state: breadcrumbs, id values for uncleared [out of scope. use ajax]
+4. set some optimistic state: breadcrumbs, id values for uncleared
    information,.... Optimistic updates provide for a good UX loading process.
 5. In the API controller, when the event comes into the API queue saying that
    the data has been received, it will `assoc` that data in the key places where
