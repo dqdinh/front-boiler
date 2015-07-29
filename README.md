@@ -137,15 +137,13 @@ Cons
 
 #### More info on the View's lifecycle
 1. get data
-2. reify om interfaces (reify: creating an individual, unique object that implements
-   the desired protocol )
+2. reify om interfaces (creating an individual, unique object that implements
+   the desired protocol e.g., om/IRender, om/IDidMount, ect.,)
 3. Pull information out of data
 4. calc derived values
 5. render template
 6. hook up event handlers to DOM node - use a side effect function called 'raise!' - queues message fire and forget.
    returns Nil. Enables Global logging.
-   ** NOTE: another way to do this would be to add logging to the channels a la
-   RX logging.
 
 #### Principles of Pure Components
 - assume controllers pre-fetch all data
